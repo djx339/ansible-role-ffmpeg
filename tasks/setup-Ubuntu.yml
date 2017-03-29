@@ -1,0 +1,6 @@
+---
+- name: Ensure repository of Ffmpeg added
+  apt_repository: "repo={{ ffmpeg_apt_repository }} validate_certs=no"
+
+- name: Install FFmpeg
+  apt: "name=ffmpeg update_cache=yes"
